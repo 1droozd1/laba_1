@@ -1,0 +1,155 @@
+Dmitry@DESKTOP-SD1O81H MINGW64 ~
+$ ssh -T git@github.com
+Hi 1droozd1! You've successfully authenticated, but GitHub does not provide shell access.
+Dmitry@DESKTOP-SD1O81H MINGW64 ~
+$ cd /c/Users/Dmitry
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+ Apple/
+'Application Data'@
+ CLionProjects/
+ Contacts/
+ Cookies@
+ Desktop/
+'Doctor Web'/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ Music/
+ NTUSER.DAT
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.TM.blf
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ Pictures/
+ PrintHood@
+ PycharmProjects/
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+ Sti_Trace.log
+ Tracing/
+ Videos/
+ YandexDisk/
+ ansel/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ pipwin/
+ source/
+'Мои документы'@
+ Шаблоны@
+'главное меню'@
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~
+$ git clone git@github.com:1droozd1/laba_1.git
+Cloning into 'laba_1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~
+$ cd laba_1
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main)
+$ ls
+README.md
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main)
+$ git checkout -b someth
+Switched to a new branch 'someth'
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (someth)
+$ git branch
+  main
+* someth
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (smth)
+$ git add test.c
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (smth)
+$ git commit -m "Try"
+[smth f2c7c01] Try
+ 1 file changed, 65 insertions(+)
+ create mode 100644 test.c
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (smth)
+$ git status
+On branch smth
+nothing to commit, working tree clean
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (smth)
+$ git push origin smth
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.36 KiB | 1.36 MiB/s, done.
+Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'smth' on GitHub by visiting:
+remote:      https://github.com/1droozd1/laba_1/pull/new/smth
+remote:
+To github.com:1droozd1/laba_1.git
+ * [new branch]      smth -> smth
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (smth)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main)
+$ git rebase smth
+Successfully rebased and updated refs/heads/main.
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 859 bytes | 16.00 KiB/s, done.
+From github.com:1droozd1/laba_1
+   5a72a0e..a3f6c31  main       -> origin/main
+ * [new branch]      eee        -> origin/eee
+Auto-merging test.c
+CONFLICT (add/add): Merge conflict in test.c
+Automatic merge failed; fix conflicts and then commit the result.
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 2 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+$ cat test.c
+<<<<<<< HEAD
+12345
+=======
+12345
+>>>>>>> a3f6c317e9df6dfbdaa4d9fa0a9819e4283070ee
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main|MERGING)
+$ git add test.c
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main|MERGING)
+$ git commit -m "Try3"
+[main a900ef8] Try3
+
+Dmitry@DESKTOP-SD1O81H MINGW64 ~/laba_1 (main)
+$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 386 bytes | 386.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:1droozd1/laba_1.git
+   a3f6c31..a900ef8  main -> main
+пше
